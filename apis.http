@@ -1,0 +1,102 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+GET http://localhost:1000/api/v1/buckets
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+
+###
+
+GET http://localhost:1000/api/v1/buckets?q=first&page=1&limit=2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+
+###
+
+GET http://localhost:1000/api/v1/buckets/5ba7f633de607337e83170f5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+
+###
+
+POST http://localhost:1000/api/v1/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@gmail.com",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:1000/api/v1/auth/login
+Content-Type: application/json
+
+{
+  "email": "johndoe@gmail.com",
+  "password": "password"
+}
+
+###
+
+POST http://localhost:1000/api/v1/buckets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+Content-Type: application/json
+
+{
+  "name": "afterfirst"
+}
+
+###
+
+PUT http://localhost:1000/api/v1/buckets/5ba7f3afc7c9ac0910b07c71
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+Content-Type: application/json
+
+{
+  "name": "initial"
+}
+
+###
+
+DELETE http://localhost:1000/api/v1/buckets/5ba7f3afc7c9ac0910b07c71
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+
+###
+
+POST http://localhost:1000/api/v1/buckets/5ba7f633de607337e83170f5/items
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+Content-Type: application/json
+
+{
+  "name": "third item"
+}
+
+###
+
+GET http://localhost:1000/api/v1/buckets/5ba7f633de607337e83170f5/items
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+
+###
+
+GET http://localhost:1000/api/v1/buckets/5ba7f633de607337e83170f5/items/5ba7fc4fe8641224b448280c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+
+###
+
+PUT http://localhost:1000/api/v1/buckets/5ba7f633de607337e83170f5/items/5ba7fc4fe8641224b448280c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+Content-Type: application/json
+
+{
+  "name": "first item"
+}
+
+###
+
+DELETE http://localhost:1000/api/v1/buckets/5ba7f633de607337e83170f5/items/5ba7fed52e6b462264e713ef
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViYTdmMmMwN2NiMjE1MzU1NGUyNjdiZCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUzNzczMzM3Mn0.0GsZqRfWM8LnP303V2cSC4oatGBtMutjorH0MXeN7Z0
+
+###
